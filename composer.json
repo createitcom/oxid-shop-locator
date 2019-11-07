@@ -1,0 +1,14 @@
+{
+  "name": "ct/shoplocator",
+  "description": "CT ShopLocator",
+  "type": "oxideshop-module",
+  "license": "proprietary",
+  "extra": {
+    "oxideshop": {
+      "blacklist-filter": [
+        "documentation/**/*.*"
+      ],
+      "target-directory": "ct/shoplocator"
+    }
+  }
+}

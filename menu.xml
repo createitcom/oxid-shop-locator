@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OX>
+    <OXMENU id="CREATE_IT_MENU">
+        <MAINMENU id="CREATE_IT_SHOPLOCATOR">
+            <SUBMENU id="CT_SHOPLOCATOR_MAP_MENU" cl="ct_shoplocator_admin_map_frame"
+                     list="ct_shoplocator_admin_map_list_controller">
+                <TAB id="CT_SHOPLOCATOR_MAP_MENU_EDIT" cl="ct_shoplocator_admin_map_edit"/>
+                <BTN id="shoplocator_new"/>
+            </SUBMENU>
+            <SUBMENU id="CT_SHOPLOCATOR_MAP_MENU_CLUSTER" cl="ct_shoplocator_admin_cluster_frame"
+                     list="ct_shoplocator_admin_cluster_list_controller">
+                <TAB id="CT_SHOPLOCATOR_MAP_MENU_CLUSTER_EDIT" cl="ct_shoplocator_admin_cluster_edit"/>
+                <BTN id="shoplocator_new"/>
+            </SUBMENU>
+            <SUBMENU id="CT_SHOPLOCATOR_MAP_MENU_SIDEBAR" cl="ct_shoplocator_admin_sidebar_frame"
+                     list="ct_shoplocator_admin_sidebar_list_controller">
+                <TAB id="CT_SHOPLOCATOR_MAP_MENU_SIDEBAR_EDIT" cl="ct_shoplocator_admin_sidebar_edit"/>
+                <BTN id="shoplocator_new"/>
+            </SUBMENU>
+            <SUBMENU id="CT_SHOPLOCATOR_MAP_MENU_INFO_BUBBLE" cl="ct_shoplocator_admin_info_bubble_frame"
+                     list="ct_shoplocator_admin_info_bubble_list_controller">
+                <TAB id="CT_SHOPLOCATOR_MAP_MENU_INFO_BUBBLE_EDIT" cl="ct_shoplocator_admin_info_bubble_edit"/>
+                <BTN id="shoplocator_new"/>
+            </SUBMENU>
+            <SUBMENU id="CT_SHOPLOCATOR_MAP_MENU_MARKER_SET" cl="ct_shoplocator_admin_marker_set_frame"
+                     list="ct_shoplocator_admin_marker_set_list_controller">
+                <TAB id="CT_SHOPLOCATOR_MAP_MENU_MARKER_SET_EDIT" cl="ct_shoplocator_admin_marker_set_edit"/>
+                <BTN id="shoplocator_new"/>
+            </SUBMENU>
+            <SUBMENU id="CT_SHOPLOCATOR_MAP_MENU_MARKER" cl="ct_shoplocator_admin_marker_frame"
+                     list="ct_shoplocator_admin_marker_list_controller">
+                <TAB id="CT_SHOPLOCATOR_MAP_MENU_MARKER_EDIT" cl="ct_shoplocator_admin_marker_edit"/>
+                <BTN id="shoplocator_new"/>
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>
