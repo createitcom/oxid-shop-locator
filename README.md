@@ -28,10 +28,22 @@ Clone the module to your OXID eShop **modules/ct/** directory:
 git clone https://github.com/createitcom/oxid-shop-locator.git shoplocator
 ```
 
-### Module installation from zip package
-
+### Module installation from zip package (manual)
 * Make a new folder "shoplocator" in the **modules/ct/ directory** of your shop installation. 
 * Download the https://github.com/createitcom/oxid-shop-locator/archive/master.zip file and unpack it into the created folder.
+* Add an entry in **{YOUR_SHOP_ROOT}/composer.json**:
+
+        "autoload": {
+           "psr-4": {
+             "ct\\shoplocator\\": "./source/modules/ct/shoplocator"
+           }
+        },
+        
+* Run composer dump-autoload from the root of project
+* Remove all files in **/var/www/{YOUR_SHOP_ROOT}/source/tmp/** (rm-rf *)
+* In oxid panel navigate to Extensions->Modules and activate CT Shoplocator.
+At this moment you should see a new menu: CREATEIT MODULES
+* Navigate to Master Settings->Core Settings->Settings(TAB) -> at the very bottom there is a config field "CreateIT ShopLocator Options" copy paste the relevant Google Maps JS api key
 
 ## Activate Module
 
@@ -39,7 +51,23 @@ git clone https://github.com/createitcom/oxid-shop-locator.git shoplocator
 
 ## Uninstall
 
-Disable the module in administration area and delete the module folder.
+Disable the module in administration area and delete the module folder. The modules stores data inside the oxid database. 
+
+If you wish to remove the database data after the module is deactivated:
+    
+    SET foreign_key_checks = 0;
+    
+        DROP TABLE IF EXISTS 
+            `ct_shoplocator_map`,
+            `ct_shoplocator_map_has_marker_set`,
+            `ct_shoplocator_map_cluster`,
+            `ct_shoplocator_map_info_bubble`,
+            `ct_shoplocator_map_sidebar`,
+            `ct_shoplocator_map_marker_set`,
+            `ct_shoplocator_map_marker_set_has_marker`,
+            `ct_shoplocator_map_marker`;
+    
+    SET foreign_key_checks = 1;
 
 ## License
 

@@ -2,6 +2,8 @@
   "name": "ct/shoplocator",
   "description": "CT ShopLocator",
   "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "eShop"],
+  "homepage": "https://www.createit.com/",
   "license": "proprietary",
   "extra": {
     "oxideshop": {
