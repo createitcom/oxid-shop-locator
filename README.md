@@ -33,13 +33,16 @@ git clone https://github.com/createitcom/oxid-shop-locator.git shoplocator
 * Download the https://github.com/createitcom/oxid-shop-locator/archive/master.zip file and unpack it into the created folder.
 * Add an entry in **{YOUR_SHOP_ROOT}/composer.json**:
 
-        "autoload": {
-           "psr-4": {
-             "ct\\shoplocator\\": "./source/modules/ct/shoplocator"
-           }
-        },
+      "autoload": {
+         "psr-4": {
+           "ct\\shoplocator\\": "./source/modules/ct/shoplocator"
+         }
+      },
         
-* Run composer dump-autoload from the root of project
+* Run (from the root of project):
+        
+      composer dump-autoload 
+        
 * Remove all files in **/var/www/{YOUR_SHOP_ROOT}/source/tmp/** (rm-rf *)
 * In oxid panel navigate to Extensions->Modules and activate CT Shoplocator.
 At this moment you should see a new menu: CREATEIT MODULES
